@@ -1,17 +1,15 @@
 package br.com.jezielmonteiro.VassCommerce;
 
-import java.util.Date;
-
 public class Usuario {
     private Long id;
     private String nomeCompleto;
     private String email;
     private String senha;
-    private Date dataUltimaAtualizacao;
-    private Date dataCadastro;
+    private String dataUltimaAtualizacao;
+    private String dataCadastro;
     private String fotoUrl;
 
-    public Usuario(Long id, String nomeCompleto, String email, String senha, Date dataUltimaAtualizacao, Date dataCadastro, String fotoUrl) {
+    public Usuario(Long id, String nomeCompleto, String email, String senha, String dataUltimaAtualizacao, String dataCadastro, String fotoUrl) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.email = email;
@@ -53,19 +51,19 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Date getDataUltimaAtualizacao() {
+    public String getDataUltimaAtualizacao() {
         return dataUltimaAtualizacao;
     }
 
-    public void setDataUltimaAtualizacao(Date dataUltimaAtualizacao) {
+    public void setDataUltimaAtualizacao(String dataUltimaAtualizacao) {
         this.dataUltimaAtualizacao = dataUltimaAtualizacao;
     }
 
-    public Date getDataCadastro() {
+    public String getDataCadastro() {
         return dataCadastro;
     }
 
-    public void setDataCadastro(Date dataCadastro) {
+    public void setDataCadastro(String dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
 

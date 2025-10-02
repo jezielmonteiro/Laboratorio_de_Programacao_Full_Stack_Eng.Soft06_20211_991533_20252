@@ -1,13 +1,11 @@
 package br.com.jezielmonteiro.VassCommerce;
 
-import java.util.Date;
-
 public class Cliente extends Usuario {
     private String fotoUrl;
-    private Date dataNascimento;
+    private String dataNascimento;
     private String cpf;
 
-    public Cliente(Long id, String nomeCompleto, String email, String senha, Date dataUltimaAtualizacao, Date dataCadastro, String fotoUrl, String fotoUrl1, Date dataNascimento, String cpf) {
+    public Cliente(Long id, String nomeCompleto, String email, String senha, String dataUltimaAtualizacao, String dataCadastro, String fotoUrl, String fotoUrl1, String dataNascimento, String cpf) {
         super(id, nomeCompleto, email, senha, dataUltimaAtualizacao, dataCadastro, fotoUrl);
         this.fotoUrl = fotoUrl1;
         this.dataNascimento = dataNascimento;
@@ -22,11 +20,11 @@ public class Cliente extends Usuario {
         this.fotoUrl = fotoUrl;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

@@ -1,18 +1,15 @@
 package br.com.jezielmonteiro.VassCommerce;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 public class Produto {
     private Long id;
     private String nome;
     private String descricao;
     private String fotoUrl;
-    private Date dataCadastro;
-    private Date dataUltimaAtualizacao;
-    private BigDecimal valorUnitario;
+    private String dataCadastro;
+    private String dataUltimaAtualizacao;
+    private double valorUnitario;
 
-    public Produto(Long id, String nome, String descricao, String fotoUrl, Date dataCadastro, Date dataUltimaAtualizacao, BigDecimal valorUnitario) {
+    public Produto(Long id, String nome, String descricao, String fotoUrl, String dataCadastro, String dataUltimaAtualizacao, double valorUnitario) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -54,27 +51,27 @@ public class Produto {
         this.fotoUrl = fotoUrl;
     }
 
-    public Date getDataCadastro() {
+    public String getDataCadastro() {
         return dataCadastro;
     }
 
-    public void setDataCadastro(Date dataCadastro) {
+    public void setDataCadastro(String dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
 
-    public Date getDataUltimaAtualizacao() {
+    public String getDataUltimaAtualizacao() {
         return dataUltimaAtualizacao;
     }
 
-    public void setDataUltimaAtualizacao(Date dataUltimaAtualizacao) {
+    public void setDataUltimaAtualizacao(String dataUltimaAtualizacao) {
         this.dataUltimaAtualizacao = dataUltimaAtualizacao;
     }
 
-    public BigDecimal getValorUnitario() {
+    public double getValorUnitario() {
         return valorUnitario;
     }
 
-    public void setValorUnitario(BigDecimal valorUnitario) {
+    public void setValorUnitario(double valorUnitario) {
         this.valorUnitario = valorUnitario;
     }
 }

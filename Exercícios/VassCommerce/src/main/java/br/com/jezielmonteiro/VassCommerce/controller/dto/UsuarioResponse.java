@@ -1,6 +1,6 @@
-package br.com.jezielmonteiro.VassCommerce;
+package br.com.jezielmonteiro.VassCommerce.controller.dto;
 
-public class Usuario {
+public class UsuarioResponse {
     private Long id;
     private String nomeCompleto;
     private String email;
@@ -8,16 +8,6 @@ public class Usuario {
     private String dataUltimaAtualizacao;
     private String dataCadastro;
     private String fotoUrl;
-
-    public Usuario(Long id, String nomeCompleto, String email, String senha, String dataUltimaAtualizacao, String dataCadastro, String fotoUrl) {
-        this.id = id;
-        this.nomeCompleto = nomeCompleto;
-        this.email = email;
-        this.senha = senha;
-        this.dataUltimaAtualizacao = dataUltimaAtualizacao;
-        this.dataCadastro = dataCadastro;
-        this.fotoUrl = fotoUrl;
-    }
 
     public Long getId() {
         return id;

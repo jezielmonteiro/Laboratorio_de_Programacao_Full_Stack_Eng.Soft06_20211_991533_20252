@@ -1,11 +1,11 @@
-package br.com.jezielmonteiro.VassCommerce;
+package br.com.jezielmonteiro.VassCommerce.model;
 
-public class Cliente extends Usuario {
+public class ClienteModel extends UsuarioModel {
     private String fotoUrl;
     private String dataNascimento;
     private String cpf;
 
-    public Cliente(Long id, String nomeCompleto, String email, String senha, String dataUltimaAtualizacao, String dataCadastro, String fotoUrl, String fotoUrl1, String dataNascimento, String cpf) {
+    public ClienteModel(Long id, String nomeCompleto, String email, String senha, String dataUltimaAtualizacao, String dataCadastro, String fotoUrl, String fotoUrl1, String dataNascimento, String cpf) {
         super(id, nomeCompleto, email, senha, dataUltimaAtualizacao, dataCadastro, fotoUrl);
         this.fotoUrl = fotoUrl1;
         this.dataNascimento = dataNascimento;

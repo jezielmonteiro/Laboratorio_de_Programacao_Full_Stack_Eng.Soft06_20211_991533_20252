@@ -1,6 +1,6 @@
-package br.com.jezielmonteiro.VassCommerce;
+package br.com.jezielmonteiro.VassCommerce.model;
 
-public class Produto {
+public class ProdutoModel {
     private Long id;
     private String nome;
     private String descricao;
@@ -9,7 +9,7 @@ public class Produto {
     private String dataUltimaAtualizacao;
     private double valorUnitario;
 
-    public Produto(Long id, String nome, String descricao, String fotoUrl, String dataCadastro, String dataUltimaAtualizacao, double valorUnitario) {
+    public ProdutoModel(Long id, String nome, String descricao, String fotoUrl, String dataCadastro, String dataUltimaAtualizacao, double valorUnitario) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;

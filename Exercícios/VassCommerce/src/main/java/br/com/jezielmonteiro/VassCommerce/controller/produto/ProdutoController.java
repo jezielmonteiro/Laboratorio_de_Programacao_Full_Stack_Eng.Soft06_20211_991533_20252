@@ -74,7 +74,7 @@ public class ProdutoController {
         long newId = (long) (produtos.size() + 1);
         ProdutoModel productToSave = ProdutoMapper.toEntity(body, newId);
         produtos.add(productToSave);
-        return ResponseEntity.body(ProdutoMapper.toResponse(productToSave));
+        return ResponseEntity.ok(ProdutoMapper.toResponse(productToSave));
     }
 
     @GetMapping("/{id}")

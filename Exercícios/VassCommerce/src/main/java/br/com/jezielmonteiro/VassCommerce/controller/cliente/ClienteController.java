@@ -74,7 +74,7 @@ public class ClienteController {
         long newId = (long) (clientes.size() + 1);
         ClienteModel customerToSave = ClienteMapper.toEntity(body, newId);
         clientes.add(customerToSave);
-        return ResponseEntity.body(ClienteMapper.toResponse(customerToSave));
+        return ResponseEntity.ok(ClienteMapper.toResponse(customerToSave));
     }
 
     @GetMapping("/{id}")

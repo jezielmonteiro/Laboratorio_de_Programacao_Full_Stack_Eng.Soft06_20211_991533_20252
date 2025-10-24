@@ -74,7 +74,7 @@ public class UsuarioController {
         long newId = (long) (usuarios.size() + 1);
         UsuarioModel userToSave = UsuarioMapper.toEntity(body, newId);
         usuarios.add(userToSave);
-        return ResponseEntity.body(UsuarioMapper.toResponse(userToSave));
+        return ResponseEntity.ok(UsuarioMapper.toResponse(userToSave));
     }
 
     @GetMapping("/{id}")

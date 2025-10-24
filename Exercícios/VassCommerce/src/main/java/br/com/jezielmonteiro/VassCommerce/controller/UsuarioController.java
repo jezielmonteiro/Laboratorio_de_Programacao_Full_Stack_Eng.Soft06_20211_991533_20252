@@ -4,6 +4,7 @@ import br.com.jezielmonteiro.VassCommerce.controller.dto.UsuarioRequest;
 import br.com.jezielmonteiro.VassCommerce.controller.dto.UsuarioResponse;
 import br.com.jezielmonteiro.VassCommerce.mapper.UsuarioMapper;
 import br.com.jezielmonteiro.VassCommerce.model.UsuarioModel;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

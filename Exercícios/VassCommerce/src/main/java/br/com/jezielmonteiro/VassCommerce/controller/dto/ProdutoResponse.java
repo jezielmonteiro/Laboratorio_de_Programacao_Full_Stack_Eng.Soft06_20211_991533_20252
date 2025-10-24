@@ -1,6 +1,6 @@
-package br.com.jezielmonteiro.VassCommerce.model;
+package br.com.jezielmonteiro.VassCommerce.controller.dto;
 
-public class ProdutoModel {
+public class ProdutoResponse {
     private Long id;
     private String nome;
     private String descricao;
@@ -8,18 +8,6 @@ public class ProdutoModel {
     private String dataCadastro;
     private String dataUltimaAtualizacao;
     private double valorUnitario;
-
-    public ProdutoModel(Long id, String nome, String descricao, String fotoUrl, String dataCadastro, String dataUltimaAtualizacao, double valorUnitario) {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
-        this.fotoUrl = fotoUrl;
-        this.dataCadastro = dataCadastro;
-        this.dataUltimaAtualizacao = dataUltimaAtualizacao;
-        this.valorUnitario = valorUnitario;
-    }
-
-    public ProdutoModel() {}
 
     public Long getId() {
         return id;

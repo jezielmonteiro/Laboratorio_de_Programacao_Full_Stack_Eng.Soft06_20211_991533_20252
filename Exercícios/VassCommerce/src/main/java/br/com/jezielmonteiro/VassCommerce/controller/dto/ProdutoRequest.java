@@ -1,33 +1,22 @@
-package br.com.jezielmonteiro.VassCommerce.model;
+package br.com.jezielmonteiro.VassCommerce.controller.dto;
 
-public class ProdutoModel {
-    private Long id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public class ProdutoRequest {
+    @NotBlank(message = "O nome é obrigatório")
+    @Size(max = 80, message = "O nome deve ter no máximo 80 caracteres")
     private String nome;
+    @NotBlank(message = "A descrição é obrigatória")
+    @Size(max = 500, message = "A descrição deve ter no máximo 500 caracteres")
     private String descricao;
     private String fotoUrl;
+    @NotBlank(message = "A data do cadastro é obrigatória")
     private String dataCadastro;
+    @NotBlank(message = "A data da última atualização é obrigatória")
     private String dataUltimaAtualizacao;
+    @NotBlank(message = "O valor unitário é obrigatório")
     private double valorUnitario;
-
-    public ProdutoModel(Long id, String nome, String descricao, String fotoUrl, String dataCadastro, String dataUltimaAtualizacao, double valorUnitario) {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
-        this.fotoUrl = fotoUrl;
-        this.dataCadastro = dataCadastro;
-        this.dataUltimaAtualizacao = dataUltimaAtualizacao;
-        this.valorUnitario = valorUnitario;
-    }
-
-    public ProdutoModel() {}
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;

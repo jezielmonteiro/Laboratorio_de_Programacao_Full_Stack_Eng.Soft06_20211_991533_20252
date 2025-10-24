@@ -5,16 +5,16 @@ import jakarta.validation.constraints.Size;
 
 public class UsuarioRequest {
     @NotBlank(message="O nome completo é obrigatório")
+    @Size(max = 80, message = "O nome completo deve ter no máximo 80 caracteres")
     private String nomeCompleto;
     @NotBlank(message="O email é obrigatório")
     private String email;
-    @NotBlank(message="A senha é obrigatório")
+    @NotBlank(message="A senha é obrigatória")
     private String senha;
     @NotBlank(message="A data da última atualização é obrigatória")
     private String dataUltimaAtualizacao;
     @NotBlank(message="A data do cadastro é obrigatória")
     private String dataCadastro;
-    @NotBlank(message="A fotoUrl é obrigatória")
     private String fotoUrl;
 
     public String getNomeCompleto() {

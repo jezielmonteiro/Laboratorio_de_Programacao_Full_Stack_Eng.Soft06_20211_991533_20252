@@ -1,6 +1,9 @@
 package br.com.jezielmonteiro.VassCommerce.model;
 
-public class ProdutoModel {
+import br.com.jezielmonteiro.VassCommerce.controller.produto.ProdutoModelInterface;
+import java.util.List;
+
+public class ProdutoModel implements ProdutoModelInterface {
     private Long id;
     private String nome;
     private String descricao;
@@ -75,5 +78,10 @@ public class ProdutoModel {
 
     public void setValorUnitario(double valorUnitario) {
         this.valorUnitario = valorUnitario;
+    }
+
+    @Override
+    public List<ProdutoModel> listarTodosProdutos() {
+        return null;
     }
 }

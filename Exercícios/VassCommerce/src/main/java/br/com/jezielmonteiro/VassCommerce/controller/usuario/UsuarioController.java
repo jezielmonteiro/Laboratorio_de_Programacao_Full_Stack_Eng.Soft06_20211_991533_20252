@@ -1,7 +1,7 @@
-package br.com.jezielmonteiro.VassCommerce.controller;
+package br.com.jezielmonteiro.VassCommerce.controller.usuario;
 
-import br.com.jezielmonteiro.VassCommerce.controller.dto.UsuarioRequest;
-import br.com.jezielmonteiro.VassCommerce.controller.dto.UsuarioResponse;
+import br.com.jezielmonteiro.VassCommerce.controller.dto.usuario.UsuarioRequest;
+import br.com.jezielmonteiro.VassCommerce.controller.dto.usuario.UsuarioResponse;
 import br.com.jezielmonteiro.VassCommerce.mapper.UsuarioMapper;
 import br.com.jezielmonteiro.VassCommerce.model.UsuarioModel;
 import jakarta.validation.Valid;
@@ -36,7 +36,7 @@ public class UsuarioController {
             @RequestParam(name = "nomeCompleto", required = false) String nomeCompleto){
 
         if (nomeCompleto == null || nomeCompleto.isBlank()) {
-            return ResponseEntity.ok(model.listarTodos()); // 200 com a lista completa
+            return ResponseEntity.ok(model.listarTodosUsuarios()); // 200 com a lista completa
         }
 
         List<UsuarioModel> filtrados = new ArrayList<>();

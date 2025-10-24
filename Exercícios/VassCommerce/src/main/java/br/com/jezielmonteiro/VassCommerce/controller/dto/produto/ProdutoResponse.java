@@ -1,4 +1,4 @@
-package br.com.jezielmonteiro.VassCommerce.controller.dto;
+package br.com.jezielmonteiro.VassCommerce.controller.dto.produto;
 
 public class ProdutoResponse {
     private Long id;

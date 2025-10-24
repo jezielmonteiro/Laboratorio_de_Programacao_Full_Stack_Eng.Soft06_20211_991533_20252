@@ -1,7 +1,7 @@
 package br.com.jezielmonteiro.VassCommerce.mapper;
 
-import br.com.jezielmonteiro.VassCommerce.controller.dto.UsuarioRequest;
-import br.com.jezielmonteiro.VassCommerce.controller.dto.UsuarioResponse;
+import br.com.jezielmonteiro.VassCommerce.controller.dto.usuario.UsuarioRequest;
+import br.com.jezielmonteiro.VassCommerce.controller.dto.usuario.UsuarioResponse;
 import br.com.jezielmonteiro.VassCommerce.model.UsuarioModel;
 
 public final class UsuarioMapper {

@@ -1,9 +1,8 @@
-package br.com.jezielmonteiro.VassCommerce.controller;
+package br.com.jezielmonteiro.VassCommerce.controller.produto;
 
 import br.com.jezielmonteiro.VassCommerce.model.ProdutoModel;
-
 import java.util.List;
 
 public interface ProdutoModelInterface {
-    List<ProdutoModel> listarTodos();
+    List<ProdutoModel> listarTodosProdutos();
 }

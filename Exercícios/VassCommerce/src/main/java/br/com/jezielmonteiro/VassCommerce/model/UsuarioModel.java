@@ -1,6 +1,6 @@
 package br.com.jezielmonteiro.VassCommerce.model;
 
-import br.com.jezielmonteiro.VassCommerce.controller.UsuarioModelInterface;
+import br.com.jezielmonteiro.VassCommerce.controller.usuario.UsuarioModelInterface;
 import java.util.List;
 
 public class UsuarioModel implements UsuarioModelInterface {
@@ -81,7 +81,7 @@ public class UsuarioModel implements UsuarioModelInterface {
     }
 
     @Override
-    public List<UsuarioModel> listarTodos() {
+    public List<UsuarioModel> listarTodosUsuarios() {
         return null;
     }
 }

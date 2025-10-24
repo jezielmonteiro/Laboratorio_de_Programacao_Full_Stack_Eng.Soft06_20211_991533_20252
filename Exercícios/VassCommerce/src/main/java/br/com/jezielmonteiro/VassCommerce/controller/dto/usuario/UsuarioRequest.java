@@ -1,21 +1,21 @@
-package br.com.jezielmonteiro.VassCommerce.controller.dto;
+package br.com.jezielmonteiro.VassCommerce.controller.dto.usuario;
 
-public class UsuarioResponse {
-    private Long id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public class UsuarioRequest {
+    @NotBlank(message="O nome completo é obrigatório")
+    @Size(max = 80, message = "O nome completo deve ter no máximo 80 caracteres")
     private String nomeCompleto;
+    @NotBlank(message="O email é obrigatório")
     private String email;
+    @NotBlank(message="A senha é obrigatória")
     private String senha;
+    @NotBlank(message="A data da última atualização é obrigatória")
     private String dataUltimaAtualizacao;
+    @NotBlank(message="A data do cadastro é obrigatória")
     private String dataCadastro;
     private String fotoUrl;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNomeCompleto() {
         return nomeCompleto;

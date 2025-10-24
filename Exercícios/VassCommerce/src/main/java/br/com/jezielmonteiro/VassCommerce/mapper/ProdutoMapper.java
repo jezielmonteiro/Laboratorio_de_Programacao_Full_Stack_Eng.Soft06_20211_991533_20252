@@ -1,7 +1,7 @@
 package br.com.jezielmonteiro.VassCommerce.mapper;
 
-import br.com.jezielmonteiro.VassCommerce.controller.dto.ProdutoRequest;
-import br.com.jezielmonteiro.VassCommerce.controller.dto.ProdutoResponse;
+import br.com.jezielmonteiro.VassCommerce.controller.dto.produto.ProdutoRequest;
+import br.com.jezielmonteiro.VassCommerce.controller.dto.produto.ProdutoResponse;
 import br.com.jezielmonteiro.VassCommerce.model.ProdutoModel;
 
 public final class ProdutoMapper {

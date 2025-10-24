@@ -1,23 +1,28 @@
 package br.com.jezielmonteiro.VassCommerce.model;
 
-public class ClienteModel extends UsuarioModel {
-    private String fotoUrl;
+import br.com.jezielmonteiro.VassCommerce.controller.cliente.ClienteModelInterface;
+import java.util.List;
+
+public class ClienteModel extends UsuarioModel implements ClienteModelInterface {
+    private String fotoUrlCliente;
     private String dataNascimento;
     private String cpf;
 
-    public ClienteModel(Long id, String nomeCompleto, String email, String senha, String dataUltimaAtualizacao, String dataCadastro, String fotoUrl, String fotoUrl1, String dataNascimento, String cpf) {
+    public ClienteModel(Long id, String nomeCompleto, String email, String senha, String dataUltimaAtualizacao, String dataCadastro, String fotoUrl, String fotoUrlCliente, String dataNascimento, String cpf) {
         super(id, nomeCompleto, email, senha, dataUltimaAtualizacao, dataCadastro, fotoUrl);
-        this.fotoUrl = fotoUrl1;
+        this.fotoUrlCliente = fotoUrlCliente;
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
     }
 
-    public String getFotoUrl() {
-        return fotoUrl;
+    public ClienteModel() {}
+
+    public String getFotoUrlCliente() {
+        return fotoUrlCliente;
     }
 
-    public void setFotoUrl(String fotoUrl) {
-        this.fotoUrl = fotoUrl;
+    public void setFotoUrlCliente(String fotoUrlCliente) {
+        this.fotoUrlCliente = fotoUrlCliente;
     }
 
     public String getDataNascimento() {
@@ -34,5 +39,10 @@ public class ClienteModel extends UsuarioModel {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    @Override
+    public List<ClienteModel> listarTodosClientes() {
+        return null;
     }
 }

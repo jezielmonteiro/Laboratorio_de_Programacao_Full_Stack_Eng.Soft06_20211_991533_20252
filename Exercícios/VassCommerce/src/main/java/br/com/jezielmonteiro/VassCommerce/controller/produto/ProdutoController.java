@@ -1,7 +1,7 @@
-package br.com.jezielmonteiro.VassCommerce.controller;
+package br.com.jezielmonteiro.VassCommerce.controller.produto;
 
-import br.com.jezielmonteiro.VassCommerce.controller.dto.ProdutoRequest;
-import br.com.jezielmonteiro.VassCommerce.controller.dto.ProdutoResponse;
+import br.com.jezielmonteiro.VassCommerce.controller.dto.produto.ProdutoRequest;
+import br.com.jezielmonteiro.VassCommerce.controller.dto.produto.ProdutoResponse;
 import br.com.jezielmonteiro.VassCommerce.mapper.ProdutoMapper;
 import br.com.jezielmonteiro.VassCommerce.model.ProdutoModel;
 import jakarta.validation.Valid;
@@ -36,7 +36,7 @@ public class ProdutoController {
             @RequestParam(name = "nome", required = false) String nome){
 
         if (nome == null || nome.isBlank()) {
-            return ResponseEntity.ok(model.listarTodos()); // 200 com a lista completa
+            return ResponseEntity.ok(model.listarTodosProdutos()); // 200 com a lista completa
         }
 
         List<ProdutoModel> filtrados = new ArrayList<>();

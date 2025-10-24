@@ -1,6 +1,10 @@
 package br.com.jezielmonteiro.VassCommerce.controller;
 
+import br.com.jezielmonteiro.VassCommerce.controller.dto.ProdutoRequest;
+import br.com.jezielmonteiro.VassCommerce.controller.dto.ProdutoResponse;
+import br.com.jezielmonteiro.VassCommerce.mapper.ProdutoMapper;
 import br.com.jezielmonteiro.VassCommerce.model.ProdutoModel;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -41,7 +45,6 @@ public class ProdutoController {
                 filtrados.add(produto);
             }
         }
-
         return ResponseEntity.ok(filtrados); // 200 com a lista filtrada (pode estar vazia)
     }
 
@@ -64,5 +67,23 @@ public class ProdutoController {
         produto.setId((long) (produtos.size() + 1));
         produtos.add(produto);
         return ResponseEntity.status(201).body(produto);
+    }
+
+    @PostMapping(consumes="application/json")
+    public ResponseEntity <ProdutoResponse> create(@Valid @RequestBody ProdutoRequest body) {
+        long newId = (long) (produtos.size() + 1);
+        ProdutoModel productToSave = ProdutoMapper.toEntity(body, newId);
+        produtos.add(productToSave);
+        return ResponseEntity.body(ProdutoMapper.toResponse(productToSave));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity <ProdutoResponse > get(@PathVariable Long id) {
+        for (ProdutoModel produto : produtos) {
+            if (produto.getId() == id) {
+                return ResponseEntity.ok(ProdutoMapper.toResponse(produto));
+            }
+        }
+        return ResponseEntity.notFound().build();
     }
 }

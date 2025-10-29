@@ -16,6 +16,8 @@ public class PedidoModel implements PedidoModelInterface {
         this.cliente = cliente;
     }
 
+    public PedidoModel() {}
+
     public String getDataCadastro() {
         return dataCadastro;
     }

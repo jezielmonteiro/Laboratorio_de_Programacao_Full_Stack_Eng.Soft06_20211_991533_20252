@@ -4,6 +4,7 @@ import br.com.jezielmonteiro.VassCommerce.controller.dto.pedido.PedidoRequest;
 import br.com.jezielmonteiro.VassCommerce.controller.dto.pedido.PedidoResponse;
 import br.com.jezielmonteiro.VassCommerce.mapper.PedidoMapper;
 import br.com.jezielmonteiro.VassCommerce.model.ClienteModel;
+import br.com.jezielmonteiro.VassCommerce.model.ItemPedidoModel;
 import br.com.jezielmonteiro.VassCommerce.model.PedidoModel;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,17 @@ public class PedidoController {
         pedidos.add(new PedidoModel(3L, "01/10/2025", 99.99, clientes.get(2)));
         pedidos.add(new PedidoModel(4L, "01/10/2025", 699.99, clientes.get(3)));
         pedidos.add(new PedidoModel(5L, "01/10/2025", 59.99, clientes.get(4)));
+
+        PedidoModel pedido = pedidos.get(0);
+        pedido.getItens().add(new ItemPedidoModel(1L, 1, 499.99, pedido));
+        PedidoModel pedido2 = pedidos.get(1);
+        pedido2.getItens().add(new ItemPedidoModel(2L, 1, 199.99, pedido2));
+        PedidoModel pedido3 = pedidos.get(2);
+        pedido3.getItens().add(new ItemPedidoModel(3L, 1, 99.99, pedido3));
+        PedidoModel pedido4 = pedidos.get(3);
+        pedido4.getItens().add(new ItemPedidoModel(4L, 1, 699.99, pedido4));
+        PedidoModel pedido5 = pedidos.get(4);
+        pedido5.getItens().add(new ItemPedidoModel(5L, 1, 59.99, pedido5));
     }
 
     @GetMapping

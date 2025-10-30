@@ -1,6 +1,7 @@
 package br.com.jezielmonteiro.VassCommerce.model;
 
 import br.com.jezielmonteiro.VassCommerce.controller.pedido.PedidoModelInterface;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PedidoModel implements PedidoModelInterface {
@@ -8,6 +9,7 @@ public class PedidoModel implements PedidoModelInterface {
     private String dataCadastro;
     private double valorTotal;
     private ClienteModel cliente;
+    private List<ItemPedidoModel> itens = new ArrayList<>();
 
     public PedidoModel(Long id, String dataCadastro, double valorTotal, ClienteModel cliente) {
         this.id = id;
@@ -18,20 +20,20 @@ public class PedidoModel implements PedidoModelInterface {
 
     public PedidoModel() {}
 
-    public String getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void setDataCadastro(String dataCadastro) {
-        this.dataCadastro = dataCadastro;
-    }
-
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(String dataCadastro) {
+        this.dataCadastro = dataCadastro;
     }
 
     public double getValorTotal() {
@@ -48,6 +50,10 @@ public class PedidoModel implements PedidoModelInterface {
 
     public void setCliente(ClienteModel cliente) {
         this.cliente = cliente;
+    }
+
+    public List<ItemPedidoModel> getItens() {
+        return itens;
     }
 
     @Override

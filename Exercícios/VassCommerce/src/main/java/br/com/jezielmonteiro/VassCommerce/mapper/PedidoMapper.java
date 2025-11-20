@@ -20,9 +20,9 @@ public final class PedidoMapper {
     public static PedidoResponse toResponse(PedidoModel p) {
         PedidoResponse r = new PedidoResponse();
         r.setId(p.getId());
-        p.setDataCadastro(p.getDataCadastro());
-        p.setValorTotal(p.getValorTotal());
-        p.setCliente(p.getCliente());
+        r.setDataCadastro(p.getDataCadastro());
+        r.setValorTotal(p.getValorTotal());
+        r.setCliente(p.getCliente());
         return r;
     }
 }
